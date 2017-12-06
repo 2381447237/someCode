@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:test="http://schemas.android.com/apk/res/com.example.testcustomview2017_4_122">
+
+   <com.example.testcustomview2017_4_122.CustomView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:padding="10dp"
+       test:image="@drawable/ic_launcher"
+       test:imageScaleType="center"
+       test:titleText="test1"
+       test:titleTextColor="#ff0000"
+       test:titleTextSize="30sp"
+       />
+
+   <com.example.testcustomview2017_4_122.CustomView 
+       android:layout_width="100dp"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:padding="10dp"
+       test:image="@drawable/ic_launcher"
+       test:imageScaleType="center"
+       test:titleText="test2"
+       test:titleTextColor="#00ff00"
+       test:titleTextSize="30sp"
+       />
+
+   <com.example.testcustomview2017_4_122.CustomView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_margin="10dp"
+       android:padding="10dp"
+       test:image="@drawable/lmj"
+       test:imageScaleType="center"
+       test:titleText="妹子"
+       test:titleTextColor="#0000ff"
+       test:titleTextSize="30sp"
+       />
+   
+</LinearLayout>

@@ -1,0 +1,16 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" 
+    xmlns:wave="http://schemas.android.com/apk/res/com.example.testcustomview2017_4_17">
+
+<com.example.testcustomview2017_4_17.CustomView 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    wave:mode="circle"
+    wave:waveWidth="10"
+      wave:waveCount="20"
+    />
+    
+</LinearLayout>

@@ -1,0 +1,97 @@
+一、泛型
+1、泛型类定义及使用
+（1）、定义泛型：Point<T>
+可以看到Point<T>，即在类名后面加一个尖括号，括号里是一个大写字母。这里写的是T，其实这个字母可以是任何大写字母，大家这里先记着，可以是任何大写字母，意义是相同的。
+
+（2）类中使用泛型
+这个T表示派生自Object类的任何类，比如String,Integer,Double等等。注意不能使用原始的变量类型，比如int,double,float等。
+
+public class Point<T> {
+
+	private T x;
+	
+	public T getX() {
+		return x;
+	}
+	public void setX(T x) {
+		this.x = x;
+	}
+	
+}
+
+（3）使用泛型类
+
+Point<Integer> ip=new Point<Integer>();
+ip.setX(123);
+System.out.println(ip.getX());
+		
+Point<Float> fp=new Point<Float>();
+fp.setX(123.45f);
+System.out.println(fp.getX());
+		
+Point<String> sp=new Point<String>();
+sp.setX("哈哈233");
+System.out.println(sp.getX());
+
+(4）使用泛型实现的优势
+（1）、不用强制转换
+(2)、在settVar()时如果传入类型不对，编译时会报错，而不是像Object实现方式一样，编译时不报错在运行时才会报强制转换错误。
+
+2、多泛型变量定义及字母规范
+（1）、多泛型变量定义
+public class MyTest<T,U> {
+
+	private T x;
+	private T y;	
+	private U name;
+
+	public T getX() {
+		return x;
+	}
+
+	public void setX(T x) {
+		this.x = x;
+	}
+
+	public T getY() {
+		return y;
+	}
+
+	public void setY(T y) {
+		this.y = y;
+	}
+
+	public U getName() {
+		return name;
+	}
+
+	public void setName(U name) {
+		this.name = name;
+	}
+	
+}
+就是在原来的T后面用逗号隔开，写上其它的任意大写字母即可。想加几个就加几个。
+（2）、字母规范
+用于指定泛型的变量是一个大写字母
+
+泛型接口，泛型类，泛型函数，返回值中存在泛型，泛型数组
+
+二、反射
+类只会被装载一次！！！！利用装载的类可以实例化出各种不同的对象！
+
+三、注解Annotation
+从JDK5开始，Java增加了Annotation(注解)，Annotation是代码里的特殊标记，这些标记可以在编译、类加载、运行时被读取，并执行相应的处理。
+
+Annotation不能运行，它只有成员变量，没有方法。Annotation跟public、final等修饰符的地位一样，都是程序元素的一部分，Annotation不能作为一个程序元素使用。
+
+JDK提供了如下4个元注解
+@Retention
+@Target
+@Documented
+@Inherited
+
+基本Annotation
+@Override 重写父类方法
+@Deprecated用于表示某个程序元素（类、方法等）已过时
+@SuppressWarning抑制编译器警告，取消显示指定的编译器警告
+@SafeVarargs是JDK 7 专门为抑制“堆污染”警告提供的
